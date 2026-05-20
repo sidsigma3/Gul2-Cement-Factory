@@ -1,5 +1,5 @@
 /* =========================================================================
-   Maa Tara Tarini Industry — site.js
+   Tarini Enterprises — site.js
    Theme toggle, mobile nav, product filter, scroll reveal, quote form.
    ========================================================================= */
 (function () {

@@ -1,5 +1,5 @@
 /* =========================================================================
-   Maa Tara Tarini Industry — site.css
+   Tarini Enterprises — site.css
    Industrial-premium design system. Dark default, light toggle.
    ========================================================================= */
 
@@ -309,6 +309,17 @@ h1, h2, h3, h4 {
 .nav-toggle:hover { background: var(--surface); }
 
 @media (max-width: 1080px) {
+  .site-nav .container { gap: 12px; }
+  .brand { min-width: 0; flex: 0 1 auto; }
+  .brand-text { min-width: 0; overflow: hidden; }
+  .brand-text .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand-text .sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .nav-actions { margin-left: auto; gap: 6px; }
+  .nav-actions .btn-primary { padding: 10px 14px; min-height: 40px; font-size: 13px; }
+
+  .nav-toggle { display: grid; order: 3; }
+
   .nav-links {
     position: fixed;
     inset: 72px 0 auto 0;
@@ -320,11 +331,23 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid var(--border);
     transform: translateY(-110%);
     transition: transform 0.3s ease;
+    margin-left: 0;
   }
   .nav-links.open { transform: translateY(0); }
   .nav-links a { padding: 14px 0; font-size: 18px; border-bottom: 1px solid var(--border); }
   .nav-links a:hover { background: transparent; color: var(--accent); }
-  .nav-toggle { display: grid; }
+}
+
+@media (max-width: 640px) {
+  .site-nav .container { height: 64px; gap: 8px; }
+  .nav-links { inset: 64px 0 auto 0; }
+  .brand .mark { width: 32px; height: 32px; font-size: 15px; }
+  .brand-text .name { font-size: 14px; }
+  .brand-text .sub { display: none; }
+  .nav-actions .btn-primary { display: none; }
+  .nav-actions { gap: 4px; }
+  .theme-toggle { width: 36px; height: 36px; }
+  .nav-toggle { width: 36px; height: 36px; }
 }
 
 /* ---------- Hero -------------------------------------------------------- */
